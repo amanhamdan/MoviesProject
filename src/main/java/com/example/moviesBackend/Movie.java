@@ -1,16 +1,12 @@
 package com.example.moviesBackend;
 
-import org.springframework.http.converter.json.GsonBuilderUtils;
-
-import java.sql.SQLOutput;
-
 public class Movie {
     int id;
-    String movieName ;
+    String movieName;
     String director;
-    String Category ;
-    int rating ;
-    public Movie() {}
+    String category;
+    int rating;
+
     public int getId() {
         return id;
     }
@@ -36,11 +32,11 @@ public class Movie {
     }
 
     public String getCategory() {
-        return Category;
+        return category;
     }
 
     public void setCategory(String category) {
-        Category = category;
+        this.category = category;
     }
 
     public int getRating() {
@@ -52,25 +48,12 @@ public class Movie {
     }
 
 
-    public Movie(int id, String movieName,  String director,int rating ,String Category )
-    {
+    public Movie(int id, String movieName, String director, int rating, String Category) {
         this.id = id;
         this.movieName = movieName;
-        this.director=director;
-        this.rating=rating;
-        this.Category=Category;
+        this.director = director;
+        this.rating = rating;
+        this.category = Category;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", movieName='" + movieName + '\'' +
-                ", director='" + director + '\'' +
-                ", Category='" + Category + '\'' +
-                ", rating=" + rating +
-                '}';
-    }
 }

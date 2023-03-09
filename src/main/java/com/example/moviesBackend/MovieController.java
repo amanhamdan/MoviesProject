@@ -13,15 +13,16 @@ import java.util.List;
 @RequestMapping("/movies")
 public class MovieController {
     @GetMapping("/show")
-    public String getMovies (){
-        return  "hello this is show page";
+    public String getMovies() {
+        return "hello this is show page";
     }
-    @ResponseBody
+
+
     @GetMapping("/moviesList")
     public List<Movie> home() {
         return Arrays.asList(
-                new Movie(1, "Pride and Prejudice", "Joe Wright", 5, "romance"),
-                new Movie(2,"Lucy","dont know",6,"Action")
+                new Movie(1, "Pride and Prejudice", "Joe Wright", 10, "romance"),
+                new Movie(2, "Lucy", "dont know", 6, "Action")
         );
 
     }
