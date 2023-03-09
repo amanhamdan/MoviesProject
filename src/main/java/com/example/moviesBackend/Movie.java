@@ -1,11 +1,19 @@
 package com.example.moviesBackend;
 
 public class Movie {
-    int id;
-    String movieName;
-    String director;
-    String category;
-    int rating;
+    private int id;
+    private String movieName;
+    private String director;
+    private String category;
+    private int rating;
+
+    public Movie(final int id, final String movieName, final String director, final int rating, final String Category) {
+        this.id = id;
+        this.movieName = movieName;
+        this.director = director;
+        this.rating = rating;
+        this.category = Category;
+    }
 
     public int getId() {
         return id;
@@ -45,15 +53,6 @@ public class Movie {
 
     public void setRating(int rating) {
         this.rating = rating;
-    }
-
-
-    public Movie(int id, String movieName, String director, int rating, String Category) {
-        this.id = id;
-        this.movieName = movieName;
-        this.director = director;
-        this.rating = rating;
-        this.category = Category;
     }
 
 }
