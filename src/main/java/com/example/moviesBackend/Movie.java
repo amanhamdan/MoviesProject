@@ -7,12 +7,12 @@ public class Movie {
     private String category;
     private int rating;
 
-    public Movie(final int id, final String movieName, final String director, final int rating, final String Category) {
+    public Movie(final int id, final String movieName, final String director, final int rating, final String category) {
         this.id = id;
         this.movieName = movieName;
         this.director = director;
         this.rating = rating;
-        this.category = Category;
+        this.category = category;
     }
 
     public int getId() {
