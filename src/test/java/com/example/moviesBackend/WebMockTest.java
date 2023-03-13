@@ -43,7 +43,12 @@ public class WebMockTest{
                 .andExpect(jsonPath("$[0].movieName").value("Pride and Prejudice"))
                 .andExpect(jsonPath("$[0].director").value("Joe Wright"))
                 .andExpect(jsonPath("$[0].rating").value(10))
-                .andExpect(jsonPath("$[0].category").value("romance"));
+                .andExpect(jsonPath("$[0].category").value("romance"))
+                .andExpect(jsonPath("$[1].id").value(2))
+                .andExpect(jsonPath("$[1].movieName").value("Lucy"))
+                .andExpect(jsonPath("$[1].director").value("LUC BESSON"))
+                .andExpect(jsonPath("$[1].rating").value(6))
+                .andExpect(jsonPath("$[1].category").value("Action"));
 
     }
 }
