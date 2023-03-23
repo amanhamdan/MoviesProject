@@ -1,21 +1,11 @@
 package com.example.moviesBackend;
 
+import com.example.moviesBackend.models.Movie;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
-import org.hamcrest.Matcher;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-import java.util.Map;
-
-import org.junit.Assert;
-
-import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import static org.hamcrest.Matchers.equalTo;
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static io.restassured.RestAssured.given;
 
 public class PostTest {
@@ -26,7 +16,7 @@ public class PostTest {
        given().contentType(ContentType.JSON).
                body(movie).
                when().
-               post("/create").
+               post("/new").
                then().
                statusCode(HttpStatus.SC_CREATED).
                body(

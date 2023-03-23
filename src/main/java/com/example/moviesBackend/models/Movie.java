@@ -1,10 +1,21 @@
-package com.example.moviesBackend;
+package com.example.moviesBackend.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table
 public class Movie {
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private String movieName;
+    @Column
     private String director;
+    @Column
     private String category;
+    @Column
     private int rating;
 
     public Movie(final int id, final String movieName, final String director, final int rating, final String category) {
@@ -13,6 +24,9 @@ public class Movie {
         this.director = director;
         this.rating = rating;
         this.category = category;
+    }
+
+    public Movie() {
     }
 
     public int getId() {
@@ -53,6 +67,17 @@ public class Movie {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", movieName='" + movieName + '\'' +
+                ", director='" + director + '\'' +
+                ", category='" + category + '\'' +
+                ", rating=" + rating +
+                '}';
     }
 
 }
