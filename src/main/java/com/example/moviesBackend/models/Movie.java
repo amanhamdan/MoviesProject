@@ -17,16 +17,28 @@ public class Movie {
     private String category;
     @Column
     private int rating;
+    @Column
+    private String image;
 
-    public Movie(final int id, final String movieName, final String director, final int rating, final String category) {
+    public Movie(final int id, final String movieName, final String director, final int rating, final String category, final String image) {
         this.id = id;
         this.movieName = movieName;
         this.director = director;
         this.rating = rating;
         this.category = category;
+        this.image = image;
+
     }
 
     public Movie() {
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getId() {

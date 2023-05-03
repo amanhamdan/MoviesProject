@@ -12,7 +12,7 @@ public class PostTest {
     @Test
     void postUsingObjectMapping(){
         //this is the expected
-        Movie movie =new Movie(3,"Aman","Hamdan",9,"Action");
+        Movie movie =new Movie(3,"Aman","Hamdan",9,"Action","dd");
        given().contentType(ContentType.JSON).
                body(movie).
                when().
@@ -24,7 +24,8 @@ public class PostTest {
                        "movieName", equalTo(movie.getMovieName()),
                        "director", equalTo(movie.getDirector()),
                        "rating", equalTo(movie.getRating()),
-                       "category",equalTo(movie.getCategory())
+                       "category",equalTo(movie.getCategory()),
+                       "url",equalTo(movie.getCategory())
 
 
                );

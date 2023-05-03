@@ -1,0 +1,3 @@
+INSERT INTO MOVIE  (id, movieName, director, rating, category) VALUES (1, 'DownFall', "Gigi", 5, "Action");
+INSERT INTO MOVIE  (id, movieName, director, rating, category) VALUES (1, 'Lucy', "James", 5, "Action");
+INSERT INTO MOVIE  (id, movieName, director, rating, category) VALUES (1, 'Harry potter', "JK-rolling", 5, "Fantasy");
