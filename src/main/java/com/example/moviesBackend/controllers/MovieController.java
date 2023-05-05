@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin(origins = "*")
 public class MovieController {
     @Autowired
     MovieService movieService ;
@@ -61,8 +64,8 @@ public class MovieController {
     @GetMapping("/list")
     public List<Movie> movieArray() {
         return Arrays.asList(
-                new Movie(1, "Pride and Prejudice", "Joe Wright", 10, "romance","dd"),
-                new Movie(2, "Lucy", "LUC BESSON", 6, "Action","dd")
+                new Movie(1, "Pride and Prejudice", "Joe Wright", 10, "romance","dd","body dksjn"),
+                new Movie(2, "Lucy", "LUC BESSON", 6, "Action","dd","body sjkado")
         );
 
     }

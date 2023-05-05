@@ -19,18 +19,29 @@ public class Movie {
     private int rating;
     @Column
     private String image;
+    @Column
+    private String body;
 
-    public Movie(final int id, final String movieName, final String director, final int rating, final String category, final String image) {
+    public Movie(final int id, final String movieName, final String director, final int rating, final String category, final String image,final String body) {
         this.id = id;
         this.movieName = movieName;
         this.director = director;
         this.rating = rating;
         this.category = category;
         this.image = image;
+        this.body=body;
 
     }
 
     public Movie() {
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 
     public String getImage() {
